@@ -10,36 +10,208 @@
   <title>Clicking Cheese</title>
 </head>
 
-<body>
+<body class=" hero-img text-white container-fluid">
+  <!-- Buttons Load different Pages for main body -->
   <header>
-<div class="row">
-  <div class="col-3">
-    <button class="btn border shadow btn-block">Text</button>
-  </div>
-  <div class="col-3">
-    <button class="btn border shadow btn-block">Text</button>
-  </div>
-  <div class="col-3">
-    <button class="btn border shadow btn-block">Text</button>
-  </div>
-  <div class="col-3">
-    <button class="btn border shadow btn-block">Text</button>
-  </div>
-</div>
+    <div class="row py-3 justify-content-around">
+      <div class="col mx-2 text-end px-5  ">
+        <h1>Clicking Cheese</h1>
+      </div>
+      <!-- <div class="col-lg-1 col-2 py-2 text-center">
+        <button class="btn border shadow bg-warning text-white hidden">Text</button>
+      </div>
+      <div class="col-lg-1 col-2 py-2 text-center">
+        <button class="btn border shadow bg-warning text-white hidden">Text</button>
+      </div>
+      <div class="col-lg-1 col-2 py-2 text-center">
+        <button class="btn border shadow bg-warning text-white hidden">Text</button>
+      </div>
+      <div class="col-lg-1 col-2 py-2 text-center">
+        <button class="btn border shadow bg-warning text-white hidden">Text</button>
+      </div> -->
+
+    </div>
   </header>
 
   <main>
+    <!-- Upgrade Buttons -->
+    <div class="row">
+      <div class="col-3 min-margin">
 
+        <div class="row justify-content-lg-between flex-md-wrap">
+          <div class="col-lg-5 text-center">
+            <img
+                src="https://images.unsplash.com/photo-1570643509348-4fe54c998566?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80"
+                alt="" class="px-2 purchaseImg">
+          </div>
+          <div class="col-lg-7 text-center align-self-center">
+            <div class="row">
+              <p>Cheese Knife : Click +1</p>
+            </div>
+            <div class="row">
+              <button onclick="Buy('knife')" class="btn border shadow text-white">Buy</button>
+            </div>
+            <div class="row" id="knifepriceid">
+              <p>Price: 1</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-lg-between flex-md-wrap">
+          <div class="col-lg-5 text-center">
+            <span><img
+                src="https://images.unsplash.com/photo-1598851418241-f52c34b6e4c3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+                alt="" class="px-2 purchaseImg"></span>
+          </div>
+          <div class="col-lg-7 text-center align-self-center">
+            <div class="row">
+              <p>Cheese Shovel Click + 5</p>
+            </div>
+            <div class="row">
+              <button onclick="Buy('shovel')" class="btn border shadow text-white">Buy</button>
+            </div>
+            <div class="row" id="shovelpriceid">
+              <p>Price: 5</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-lg-between flex-sm-wrap">
+          <div class="col-lg-5 text-center">
+            <img
+                src="https://images.unsplash.com/photo-1620216533243-755244d986df?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=725&q=80"
+                alt="" class="px-2 purchaseImg">
+          </div>
+          <div class="col-lg-7 text-center align-self-center">
+            <div class="row">
+              <p>Cheese Pickaxe : Click +25</p>
+            </div>
+            <div class="row">
+              <button onclick="Buy('pickaxe')" class="btn border shadow text-white">Buy</button>
+            </div>
+            <div class="row" id="pickaxepriceid">
+              <p>Price: 20</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-lg-between flex-sm-wrap">
+          <div class="col-lg-5 text-center">
+            <img
+                src="https://images.unsplash.com/photo-1524072704778-007808d701d0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=448&q=80"
+                alt="" class="px-2 purchaseImg">
+          </div>
+          <div class="col-lg-7 text-center align-self-center">
+            <div class="row">
+              <p>Cheese Cart : +5per 3sec</p>
+            </div>
+            <div class="row">
+              <button onclick="Buy('cart')" class="btn border shadow text-white">Buy</button>
+            </div>
+            <div class="row" id="cartpriceid">
+              <p>Price: 10</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-lg-between flex-sm-wrap">
+          <div class="col-lg-5 text-center">
+            <img
+                src="https://images.unsplash.com/photo-1599766431396-2405fdfcf5e4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+                alt="" class="px-2 purchaseImg">
+          </div>
+          <div class="col-lg-7 text-center align-self-center">
+            <div class="row">
+              <p>Cheese Wagon : +20per 3sec</p>
+            </div>
+            <div class="row">
+              <button onclick="Buy('wagon')" class="btn border shadow text-white">Buy</button>
+            </div>
+            <div class="row" id="wagonpriceid">
+              <p>Price: 30</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-lg-between flex-sm-wrap">
+          <div class="col-lg-5 text-center">
+            <img
+                src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=849&q=80"
+                alt="" class="px-2 purchaseImg">
+          </div>
+          <div class="col-lg-7 text-center align-self-center">
+            <div class="row">
+              <p>Cheese Train : +75per 3sec</p>
+            </div>
+            <div class="row">
+              <button onclick="Buy('train')" class="btn border shadow text-white">Buy</button>
+            </div>
+            <div class="row" id="trainpriceid">
+              <p>Price: 100</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo and button go here -->
+      <div class="col-6">
+        <div class="row"></div>
+        <div class="row">
+          <img onclick="Clicker()" src="/assests/PikPng.com_full-moon-png_319839.png" alt="" class="spin moonimg">
+        </div>
+        <div class="row"></div>
+      </div>
+
+      <!-- stats go here -->
+      <div class="col-3 text-center" id="playerStats">
+        <div class="row py-4" id="totCheese">
+          <p>0 Cheese</p>
+        </div>
+        <div class="row py-4" id="knifeAmtId">
+          <p>1 Cheese Knifes</p>
+        </div>
+        <div class="row py-4" id="shovelAmtId">
+          <p>0 Cheese Shovels</p>
+        </div>
+        <div class="row py-4" id="pickaxeAmtId">
+          <p>0 Cheese Pickaxes</p>
+        </div>
+        <div class="row py-4" id="cartAmtId">
+          <p>0 Cheese Carts</p>
+        </div>
+        <div class="row py-4" id="wagonAmtId">
+          <p>0 Cheese Wagons </p>
+        </div>
+        <div class="row py-4" id="trainAmtId">
+          <p>0 Cheese Trains</p>
+        </div>
+      </div>
+
+    </div>
+    <script type="text/javascript" src="app.js"></script>
   </main>
 
 
+  <style>
+    /* This is for wire framing to see our rows/columns */
+    body.debug .container,
+    body.debug .container-fluid {
+      outline: 2px double blue;
+      outline-offset: -2px;
+    }
 
-  <footer>
+    body.debug .row {
+      outline: 2px dashed red;
+      outline-offset: -2px;
+    }
 
-  </footer>
+    body.debug [class*="col-"] {
+      outline: 2px dotted forestgreen;
+      outline-offset: -3px;
+    }
+    </style>
 
 
-  <script src="app.js"></script>
 </body>
 
 </html>
