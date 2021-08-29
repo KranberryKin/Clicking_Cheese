@@ -158,27 +158,27 @@ function Buy(String) {
 function PriceIncrease(String) {
   switch (String) {
     case 'knife':
-      let a = Math.ceil(KnifePriElem * 1.2);
+      let a = Math.ceil(KnifePriElem * 1.7);
        KnifePriElem = a;
       break;
     case 'shovel':
-      let b = Math.ceil(ShovelPriElem * 1.2);
+      let b = Math.ceil(ShovelPriElem * 1.7);
        ShovelPriElem = b;
       break;
     case 'pickaxe':
-      let c = Math.ceil(PickPriElem * 1.2);
+      let c = Math.ceil(PickPriElem * 1.7);
        PickPriElem = c;
       break;
     case 'cart':
-      let d = Math.ceil(CartPriElem * 1.2);
+      let d = Math.ceil(CartPriElem * 1.7);
        CartPriElem = d;
       break;
     case 'wagon':
-      let e = Math.ceil(WagonPriElem * 1.2);
+      let e = Math.ceil(WagonPriElem * 1.7);
        WagonPriElem = e;
       break;
     case 'train':
-      let f = Math.ceil(TrainPriElem * 1.2);
+      let f = Math.ceil(TrainPriElem * 1.7);
        TrainPriElem = f;
       break;
   }
